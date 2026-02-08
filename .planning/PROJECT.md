@@ -58,8 +58,9 @@ Strategy: Affiliate-first tool selection with quality fallbacks. Using our own a
 - **Midjourney** -- AI image generation (character design, thumbnails, visual assets, b-roll stills)
 - **Freepik** -- Stock images, vectors, videos, templates (visual assets, backgrounds)
 - **Adobe Creative Cloud** -- Premiere Pro (video editing/templates), After Effects (motion graphics, glitch effects), Photoshop (image editing), Illustrator (character/brand assets)
+- **Artlist** -- Royalty-free music, sound effects, and stock footage (background music beds, transition sounds, glitch SFX, b-roll video clips)
 
-These complement the affiliate tools as quality fallbacks or for tasks the affiliate tools can't handle (e.g., Midjourney for Professor Glitch character design, After Effects for intro/outro templates, Freepik for stock footage).
+These complement the affiliate tools as quality fallbacks or for tasks the affiliate tools can't handle (e.g., Midjourney for Professor Glitch character design, After Effects for intro/outro templates, Artlist for licensed music/SFX beds, Freepik for stock imagery).
 
 **Creative reference:** Professor Glitch TikTok channel -- retro/glitch aesthetic, animated text overlays, approachable AI explainers with rapid cuts, 30-60 second format.
 
