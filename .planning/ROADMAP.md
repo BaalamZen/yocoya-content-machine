@@ -68,13 +68,15 @@ Plans:
 ### Phase 3: Video Assembly
 **Goal**: Pipeline combines audio, visuals, and subtitles into platform-ready vertical video files
 **Depends on**: Phase 2
-**Requirements**: VIDEO-01, VIDEO-02, VIDEO-03, VIDEO-04, VISUL-01
+**Requirements**: VIDEO-01, VIDEO-02, VIDEO-03, VIDEO-04, VIDEO-05, VIDEO-06, VISUL-01
 **Success Criteria** (what must be TRUE):
   1. n8n workflow outputs final video file in 9:16 vertical format, 30-60 seconds duration, MP4 codec
   2. Spanish subtitles are auto-generated and synced to voiceover timing
   3. English subtitles are generated as secondary track or overlay
   4. Videos meet platform specifications for all 4 targets (TikTok, Instagram, YouTube, X) including resolution, file size, and safe zones for text overlays
   5. Visual assets (stock footage, images, or AI-generated) are mapped to script sections and assembled with audio
+  6. Background music bed from Artlist library is mixed under voiceover at appropriate volume level
+  7. Transition and glitch SFX from Artlist library are applied at scene changes
 **Plans**: TBD
 
 Plans:
@@ -83,13 +85,14 @@ Plans:
 ### Phase 4: Character & Brand
 **Goal**: Professor Glitch persona appears consistently in all videos with yocoya.ai branding
 **Depends on**: Phase 3
-**Requirements**: BRAND-01, BRAND-02, BRAND-03, VISUL-02, VISUL-03
+**Requirements**: BRAND-01, BRAND-02, BRAND-03, BRAND-04, VISUL-02, VISUL-03
 **Success Criteria** (what must be TRUE):
   1. Professor Glitch character is designed with defined visual identity, voice persona, and personality traits documented
   2. Character avatar appears in every video with consistent intro sequence and visual treatment
   3. Yocoya.ai logo and URL are visible in all videos (intro/outro or persistent overlay)
   4. Visual style matches Professor Glitch aesthetic reference (retro/glitch theme, animated text overlays, rapid cuts)
   5. Brand consistency is maintained across all videos (color palette, typography, transition style)
+  6. Curated Artlist audio library maintained in cloud storage (10-15 music beds, 20-30 SFX) categorized by video type and mood
 **Plans**: TBD
 
 Plans:

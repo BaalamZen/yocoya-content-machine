@@ -38,12 +38,15 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **VIDEO-02**: Spanish subtitles are auto-generated and synced to voiceover
 - [ ] **VIDEO-03**: English subtitles are generated as secondary track/overlay
 - [ ] **VIDEO-04**: Video meets platform specs for all 4 targets (resolution, codec, file size, safe zones)
+- [ ] **VIDEO-05**: Background music bed from Artlist library is mixed under voiceover at appropriate volume level
+- [ ] **VIDEO-06**: Transition and glitch SFX from Artlist library are applied at scene changes
 
 ### Character & Brand
 
 - [ ] **BRAND-01**: Named AI character persona is designed with visual identity, voice, and personality traits
 - [ ] **BRAND-02**: Character appears consistently in all videos (avatar, intro sequence, visual treatment)
 - [ ] **BRAND-03**: Yocoya.ai branding (logo, URL) is visible in every video
+- [ ] **BRAND-04**: Curated Artlist audio library maintained in cloud storage (10-15 music beds, 20-30 SFX) categorized by video type and mood
 
 ### Human Review
 
@@ -138,10 +141,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VIDEO-02 | Phase 3 | Pending |
 | VIDEO-03 | Phase 3 | Pending |
 | VIDEO-04 | Phase 3 | Pending |
+| VIDEO-05 | Phase 3 | Pending |
+| VIDEO-06 | Phase 3 | Pending |
 | VISUL-01 | Phase 3 | Pending |
 | BRAND-01 | Phase 4 | Pending |
 | BRAND-02 | Phase 4 | Pending |
 | BRAND-03 | Phase 4 | Pending |
+| BRAND-04 | Phase 4 | Pending |
 | VISUL-02 | Phase 4 | Pending |
 | VISUL-03 | Phase 4 | Pending |
 | REVEW-01 | Phase 5 | Pending |
@@ -169,8 +175,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ERROR-03 | Phase 9 | Pending |
 
 **Coverage:**
-- v1 requirements: 36 total
-- Mapped to phases: 36
+- v1 requirements: 39 total
+- Mapped to phases: 39
 - Unmapped: 0
 
 ---
