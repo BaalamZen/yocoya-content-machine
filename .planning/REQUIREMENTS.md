@@ -63,10 +63,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Content Sourcing
 
-- [ ] **SOURC-01**: Pipeline can pull tool data from Webflow CMS Herramientas collection to auto-generate spotlight video topics
-- [ ] **SOURC-02**: Pipeline monitors AI news feeds (existing Airtable/RSS pipeline) to detect trending topics for explainer videos
-- [ ] **SOURC-03**: Content mix targets 70% AI term explainers, 30% tool spotlights
-- [ ] **SOURC-04**: Pipeline produces 3-5 videos per week
+- [ ] **SOURC-01**: Pipeline queries Webflow CMS Herramientas collection filtering for published tools with complete data (description, features, pricing, affiliate link)
+- [ ] **SOURC-02**: Pipeline checks Airtable content log to skip tools that already have videos, avoiding duplicates
+- [ ] **SOURC-03**: Pipeline prioritizes tools with active affiliate links for spotlight videos (revenue-first ordering)
+- [ ] **SOURC-04**: Pipeline monitors AI news feeds (existing Airtable/RSS pipeline) to detect trending topics for explainer videos
+- [ ] **SOURC-05**: Content mix targets 70% AI term explainers, 30% tool spotlights
+- [ ] **SOURC-06**: Pipeline produces 3-5 videos per week
 
 ### Tracking & Analytics
 
@@ -122,13 +124,55 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (populated by roadmapper) | | |
+| VALID-01 | Phase 0 | Pending |
+| VALID-02 | Phase 0 | Pending |
+| VALID-03 | Phase 0 | Pending |
+| SCRPT-01 | Phase 1 | Pending |
+| SCRPT-02 | Phase 1 | Pending |
+| SCRPT-03 | Phase 1 | Pending |
+| SCRPT-04 | Phase 1 | Pending |
+| VOICE-01 | Phase 2 | Pending |
+| VOICE-02 | Phase 2 | Pending |
+| VOICE-03 | Phase 2 | Pending |
+| VIDEO-01 | Phase 3 | Pending |
+| VIDEO-02 | Phase 3 | Pending |
+| VIDEO-03 | Phase 3 | Pending |
+| VIDEO-04 | Phase 3 | Pending |
+| VISUL-01 | Phase 3 | Pending |
+| BRAND-01 | Phase 4 | Pending |
+| BRAND-02 | Phase 4 | Pending |
+| BRAND-03 | Phase 4 | Pending |
+| VISUL-02 | Phase 4 | Pending |
+| VISUL-03 | Phase 4 | Pending |
+| REVEW-01 | Phase 5 | Pending |
+| REVEW-02 | Phase 5 | Pending |
+| REVEW-03 | Phase 5 | Pending |
+| REVEW-04 | Phase 5 | Pending |
+| DISTR-01 | Phase 6 | Pending |
+| DISTR-02 | Phase 6 | Pending |
+| DISTR-03 | Phase 6 | Pending |
+| DISTR-04 | Phase 6 | Pending |
+| DISTR-05 | Phase 6 | Pending |
+| DISTR-06 | Phase 6 | Pending |
+| SOURC-01 | Phase 7 | Pending |
+| SOURC-02 | Phase 7 | Pending |
+| SOURC-03 | Phase 7 | Pending |
+| SOURC-04 | Phase 7 | Pending |
+| SOURC-05 | Phase 7 | Pending |
+| SOURC-06 | Phase 7 | Pending |
+| TRACK-01 | Phase 8 | Pending |
+| TRACK-02 | Phase 8 | Pending |
+| TRACK-03 | Phase 8 | Pending |
+| TRACK-04 | Phase 8 | Pending |
+| ERROR-01 | Phase 9 | Pending |
+| ERROR-02 | Phase 9 | Pending |
+| ERROR-03 | Phase 9 | Pending |
 
 **Coverage:**
-- v1 requirements: 34 total
-- Mapped to phases: 0
-- Unmapped: 34
+- v1 requirements: 36 total
+- Mapped to phases: 36
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-08*
-*Last updated: 2026-02-08 after initial definition*
+*Last updated: 2026-02-08 after roadmap creation*
