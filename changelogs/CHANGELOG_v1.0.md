@@ -155,6 +155,67 @@ Faceless TikTok channel ("Professor Glitch") needs a production-ready asset libr
 
 ---
 
+## NAMING CONVENTION & BULK RENAME
+
+### Problem
+~397 files (10.4%) had unusable names after reorganization:
+- AI prompt filenames 200+ characters long ("Elongated glass mandala, oval jewel-like structure...")
+- UUID hashes ("0e4f9007-ed58-4cbc-bcb9-5d4fbc35b580.png")
+- Midjourney IDs ("u2675149154_A_hyper-realistic_3D_coin...")
+- Nano Banana timestamps ("nano-banana-2025-09-05T19-52-41.png")
+- ChatGPT/Gemini timestamps ("Generated Image September 09, 2025 - 11_35PM.png")
+- URL-encoded characters ("KAI%2520Logo%2520-%2520Up_upscayl_4x.png")
+- Inconsistent casing, spaces, underscores
+
+### Solution
+1. **Naming convention standard** (`D:/media/_NAMING-CONVENTION.md`) — permanent guide:
+   - All lowercase, hyphens only, max 60 chars
+   - Format: `[context]-[descriptor]-[##].[ext]`
+   - Per-folder patterns (e.g., `kai-coin-01.png`, `lotus-neon-blue-crystal.png`)
+   - Strip all AI source prefixes, UUIDs, timestamps
+
+2. **Bulk rename script** (`D:/media/_rename-files.ps1`) — same dry-run/logged pattern:
+   - 267 files renamed across 11 folders
+   - 0 errors
+   - Full old → new mapping in `D:/media/_rename-log.txt` (preserves Getty/AdobeStock IDs for licensing)
+
+### Rename Stats
+| Metric | Value |
+|---|---|
+| Files renamed | 267 |
+| Errors | 0 |
+| Midjourney prefix remaining | 0 |
+| Nano Banana prefix remaining | 0 |
+| Spaces in filenames remaining | 0 (in targeted folders) |
+
+### Folders Cleaned
+| Folder | Before | After |
+|---|---|---|
+| `projects/kai/branding/` | 62.9% bad names | Clean |
+| `creative/lotus-flowers/` | 89.3% bad names | Clean |
+| `creative/mandalas/` | 100% bad names | Clean |
+| `creative/buddha-zen/` | 39.5% bad names | Clean |
+| `assets/stock-images/vecteezy/` | 100% bad names | Clean |
+| `assets/icons/3d-web-icons/` | 100% bad names | Clean |
+| `assets/stock-footage/` | 100% bad names | Clean |
+| `projects/yocoya/website/` | 65%+ bad names | Clean |
+| `creative/abstract/` | 32% bad names | Clean |
+| `creative/misc/` | 100% bad names | Clean |
+
+### Skipped (for manual review)
+- **Dossiers** (60 ChatGPT files) — need visual context to name
+- **Avatars** (72 UUID files) — need visual context to name
+- **Etsy** (1,366 files) — separate project
+
+### Files Generated
+| File | Purpose |
+|---|---|
+| `_NAMING-CONVENTION.md` | Permanent naming rules & per-folder patterns |
+| `_rename-files.ps1` | Reusable rename script |
+| `_rename-log.txt` | Full old→new mapping for license tracking |
+
+---
+
 ## NEXT STEPS
 
 - [ ] Download SFX from Artlist using shopping lists (start with glitch + whoosh + impact)
@@ -163,6 +224,8 @@ Faceless TikTok channel ("Professor Glitch") needs a production-ready asset libr
 - [ ] Create Professor Glitch intro/outro template using new assets
 - [ ] Connect asset pipeline to n8n video production workflow
 - [ ] First test video with full SFX/VFX/music stack
+- [ ] Manually review & rename dossier files (60 files)
+- [ ] Manually review & rename avatar UUID files (72 files)
 
 ---
 
