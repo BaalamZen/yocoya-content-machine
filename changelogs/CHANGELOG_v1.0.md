@@ -216,10 +216,47 @@ Faceless TikTok channel ("Professor Glitch") needs a production-ready asset libr
 
 ---
 
+## ASSET INVENTORY & FOLDER STRUCTURE (February 20, 2026)
+
+### Context
+Created a searchable asset inventory CSV and matching folder structure on Desktop (`yocoya-fx/`) to serve as a staging area for downloading assets from Artlist and Freepik before importing into the production media library.
+
+### Asset Inventory CSV
+- **File:** `Desktop/yocoya-fx/asset-inventory.csv`
+- **59 asset types** across 7 categories, each with 5 optimized search terms
+- **Platform column** indicates whether to search Artlist or Freepik
+- Includes expanded **Glitch AI background** entry with 20 search terms (4 rows)
+
+| Category | Assets | Platform |
+|---|---|---|
+| SFX | 13 types (whooshes, transitions, impacts, glitch, UI clicks, typing, notifications, power up, error, beeps, ambient, risers, pop/reveal) | Artlist |
+| Music | 5 types (high-energy intro, lofi chill, tech electronic, explainer, outro) | Artlist |
+| VFX | 12 types (glitch overlay, scan lines, text reveal, lower thirds, transition wipes, particles, light leaks, digital rain, HUD, neon glow, CTA/subscribe, logo reveal) | Artlist |
+| Backgrounds | 11 types (abstract tech, neural network, circuit board, data viz, server/datacenter, robot/AI, screen mockup, gradients, earth/global, hologram, **glitch AI**) | Artlist |
+| Graphics | 10 types (AI icons, tool icons, emoji, arrows, badges, versus, step indicators, speech bubbles, checkmarks, price tags) | Freepik |
+| Brand | 5 types (character avatar, teal frames, watermarks, intro/outro slates, thumbnails) | Freepik |
+
+### Folder Structure Created
+62 directories matching the CSV inventory:
+
+```
+Desktop/yocoya-fx/
+├── asset-inventory.csv
+├── sfx/           (13 subfolders)
+├── music/         (5 subfolders)
+├── vfx/           (12 subfolders)
+├── backgrounds/   (11 subfolders, includes glitch-ai/)
+├── graphics/      (10 subfolders)
+└── brand/         (5 subfolders)
+```
+
+---
+
 ## NEXT STEPS
 
 - [ ] Download SFX from Artlist using shopping lists (start with glitch + whoosh + impact)
 - [ ] Download VFX overlays from Artlist (glitch overlays + text reveals)
+- [ ] Download glitch AI backgrounds from Artlist (20 search terms ready)
 - [ ] Source 10-15 high-energy music tracks for TikTok
 - [ ] Create Professor Glitch intro/outro template using new assets
 - [ ] Connect asset pipeline to n8n video production workflow
