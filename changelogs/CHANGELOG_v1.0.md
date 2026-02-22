@@ -252,8 +252,72 @@ Desktop/yocoya-fx/
 
 ---
 
+## FREEPIK MCP SERVER & ATTRIBUTION TRACKER (February 22, 2026)
+
+### Context
+Built a local Freepik API MCP server to automate asset search, download, and attribution tracking. Downloads go directly into the `yocoya-fx/` staging folder with auto-incrementing filenames. Attribution is logged automatically on every download.
+
+### Freepik MCP Server
+- **Location:** `yocoya.ai/mcp-servers/freepik/server.py`
+- **Pattern:** Same as webflow-data — FastMCP + httpx, runs via `uv run`
+- **Config:** `.mcp.json` with `FREEPIK_API_KEY` env var
+- **9 tools:**
+
+| Tool | Purpose |
+|---|---|
+| `search_resources` | Search vectors, photos, PSDs (filters: type, license, color, orientation) |
+| `get_resource_detail` | Full metadata: author, license, formats, dimensions, tags |
+| `get_download_url` | Get download link (default format) |
+| `get_download_by_format` | Get download link for specific format (eps, svg, png, psd, ai) |
+| `search_icons` | Search Flaticon icons (shape, color, type filters) |
+| `download_and_track` | Download file + auto-log attribution |
+| `list_tracked_assets` | List tracked downloads (filter by category/subfolder) |
+| `attribution_summary` | Summary by category, license, AI-generated status |
+
+### Naming Convention
+Files saved as `{subfolder}-{###}-{resource_id}.{ext}` with auto-incrementing sequence per folder.
+- `###` = 3-digit sequence (001, 002, ...)
+- `resource_id` = Freepik ID (ties back to license/re-download)
+- Examples: `ai-icons-001-390228701.eps`, `thumbnails-003-87654321.psd`
+
+### Attribution Tracker
+- **File:** `yocoya-fx/asset-attribution.json`
+- **Auto-populated on every `download_and_track` call**
+- **Fields per record:**
+
+| Field | Description |
+|---|---|
+| `id` | Auto-increment ID |
+| `filename` | Local filename (naming convention) |
+| `source_platform` | "Freepik" |
+| `source_url` | Full URL on Freepik |
+| `resource_id` | Freepik resource ID |
+| `freepik_title` | Original title on Freepik |
+| `author` | Author name |
+| `license_type` | Premium or Freemium |
+| `is_ai_generated` | Boolean from Freepik metadata |
+| `attribution_required` | Boolean (Freemium=yes, Premium=no) |
+| `attribution` | Formatted: "Designed by X on Freepik" |
+| `category` | Top-level folder (graphics, brand, etc.) |
+| `subfolder` | Subfolder name (ai-icons, thumbnails, etc.) |
+| `format` | File extension (eps, svg, png, psd) |
+| `dimensions` | Width x height |
+| `search_term` | Query that found the asset |
+| `used_for` | Intended purpose |
+| `used_in` | Fill in later when asset appears in a video/page |
+| `tags` | Comma-separated tags |
+| `local_path` | Full local path |
+| `downloaded_at` | ISO timestamp |
+
+### Platform Split (from asset-inventory.csv)
+- **Freepik (MCP-automated):** Graphics (10 types) + Brand (5 types) = 15 asset categories
+- **Artlist (manual):** SFX (13) + Music (5) + VFX (12) + Backgrounds (15) = 45 asset categories
+
+---
+
 ## NEXT STEPS
 
+- [ ] Download 15 Freepik asset categories via MCP (Graphics + Brand)
 - [ ] Download SFX from Artlist using shopping lists (start with glitch + whoosh + impact)
 - [ ] Download VFX overlays from Artlist (glitch overlays + text reveals)
 - [ ] Download glitch AI backgrounds from Artlist (20 search terms ready)
