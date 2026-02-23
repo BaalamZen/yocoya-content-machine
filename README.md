@@ -9,7 +9,7 @@ Automatically generates short-form video content (30-60s) about AI topics, featu
 ## Content Mix
 
 - **70% AI Term Explainers** -- LLMs, RAG, Generative AI, etc.
-- **30% Tool Spotlights** -- sourced from yocoya.ai's 47+ tool catalog
+- **30% Tool Spotlights** -- sourced from yocoya.ai's 97+ tool catalog
 
 ## Pipeline
 
@@ -31,6 +31,21 @@ Topic Selection → Script Generation (LLM) → Voice (ElevenLabs es-MX)
 - **Review Queue:** Airtable
 - **Content Source:** Webflow CMS (Herramientas collection) + Airtable RSS feeds
 - **Tracking:** UTM params per video → yocoya.ai landing pages
+
+## Asset Pipeline
+
+Visual assets live in `~/OneDrive/Desktop/yocoya-fx/` (staging) and `D:/media/` (production).
+
+**Two-tier system:**
+- **EPS/AI sheets** -- reference catalog for browsing icon variety (not usable by video tools)
+- **Individual PNGs** -- production-ready, transparent, single icon (workflow-ready)
+
+The n8n workflow finds assets by querying `yocoya-fx/asset-attribution.json`:
+1. Script generation identifies needed visuals (e.g., "show checkmark")
+2. n8n filters by `tags` + `subfolder` + `icon_name`
+3. Matching PNG path is passed to the video assembly tool as overlay
+
+See `yocoya-fx/STYLE-GUIDE.md` for icon styles, scene modes, and Freepik search keywords.
 
 ## Affiliate Tools in Pipeline
 
