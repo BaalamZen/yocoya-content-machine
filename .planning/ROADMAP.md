@@ -74,9 +74,9 @@ Plans:
   2. Spanish subtitles are auto-generated and synced to voiceover timing
   3. English subtitles are generated as secondary track or overlay
   4. Videos meet platform specifications for all 4 targets (TikTok, Instagram, YouTube, X) including resolution, file size, and safe zones for text overlays
-  5. Visual assets (stock footage, images, or AI-generated) are mapped to script sections and assembled with audio
-  6. Background music bed from Artlist library is mixed under voiceover at appropriate volume level
-  7. Transition and glitch SFX from Artlist library are applied at scene changes
+  5. Visual assets from `D:/media/` (stock footage, icons, backgrounds, AI-generated art) are mapped to script sections and assembled with audio
+  6. Background music bed from `D:/media/audio/music/` is mixed under voiceover at appropriate volume level
+  7. Transition and glitch SFX from `D:/media/audio/sfx/` are applied at scene changes
 **Plans**: TBD
 
 Plans:
@@ -92,7 +92,7 @@ Plans:
   3. Yocoya.ai logo and URL are visible in all videos (intro/outro or persistent overlay)
   4. Visual style matches Professor Glitch aesthetic reference (retro/glitch theme, animated text overlays, rapid cuts)
   5. Brand consistency is maintained across all videos (color palette, typography, transition style)
-  6. Curated Artlist audio library maintained in cloud storage (10-15 music beds, 20-30 SFX) categorized by video type and mood
+  6. Curated audio library maintained at `D:/media/audio/` (music in `music/chill-beat/`, `music/high-energy/`, `music/ambient/`; SFX in `sfx/glitch/`, `sfx/whoosh/`, `sfx/ui/`, `sfx/impact/`, `sfx/ambient/`) sourced via Artlist/Freepik shopping lists at `D:/media/_shopping-lists/`
 **Plans**: TBD
 
 Plans:

@@ -51,11 +51,11 @@
 | **Multi-Platform Publisher** | Post to TikTok, Reels, Shorts, X with platform-specific formatting | Blotato API integration |
 | **Analytics Tracker** | Monitor video performance, landing page conversions | Airtable logging + platform APIs |
 | **State Store** | Track pipeline progress, asset versions, retry state | Airtable (yocoya_publish_queue, yocoya_ingest_log) |
-| **Asset Storage** | Persist generated audio, video, image files | S3-compatible storage or file system mount |
+| **Asset Storage** | Persist generated audio, video, image files | `D:/media/` master library (production assets) + S3/R2 for pipeline-generated per-video assets |
 
 ## Recommended Pipeline Structure
 
-```
+```text
 workflows/
 ├── main-content-pipeline.json       # Primary orchestration workflow
 │   ├── trigger/                     # Scheduled topic selection
@@ -68,6 +68,17 @@ workflows/
 ├── subtask-video-assembly.json      # Isolated video composition workflow
 └── subtask-platform-posting.json    # Isolated multi-platform posting workflow
 
+# PRODUCTION ASSET LIBRARY (D:/media/) -- shared, reusable assets
+# See D:/media/_NAMING-CONVENTION.md for naming rules
+D:/media/
+├── assets/                          # Backgrounds, fonts, icons, stock images/footage
+├── audio/                           # Music (chill-beat, high-energy, ambient), SFX (glitch, whoosh, UI, impact)
+├── creative/                        # AI-generated art (lotus, mandalas, buddha-zen, abstract, fantasy, nature)
+├── projects/yocoya/                 # Yocoya branding, youtube assets, FX, affiliate partner assets
+├── video/                           # Footage, VFX (glitch, overlays, text-reveals, backgrounds)
+└── _shopping-lists/                 # 11 Artlist/Freepik guides for sourcing missing assets
+
+# PER-VIDEO GENERATED ASSETS (S3/R2 or local pipeline output)
 assets/
 ├── audio/                           # Generated voiceovers
 │   └── {video-id}/                  # One folder per video
@@ -568,7 +579,11 @@ Temporary Storage (n8n container volume or temp S3 bucket)
 
 ### File Naming Convention
 
-```
+**Production assets (D:/media/):** Follow `D:/media/_NAMING-CONVENTION.md` -- all lowercase, hyphens only, max 60 chars, format `[context]-[descriptor]-[##].[ext]`. License tracking via `_rename-log.txt`.
+
+**Pipeline-generated assets (per-video):**
+
+```text
 {video_id}_{stage}_{version}_{platform}.{ext}
 
 Examples:

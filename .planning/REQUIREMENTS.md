@@ -28,7 +28,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Visual Generation
 
-- [ ] **VISUL-01**: Pipeline generates visual assets (stock footage, images, or AI-generated) mapped to script sections
+- [ ] **VISUL-01**: Pipeline generates or selects visual assets from `D:/media/` (stock footage, icons, backgrounds, AI-generated art) mapped to script sections
 - [ ] **VISUL-02**: Visual style matches Professor Glitch aesthetic (retro/glitch, animated text overlays, rapid cuts)
 - [ ] **VISUL-03**: Brand consistency maintained across all videos (color palette, intro/outro, character placement)
 
@@ -38,15 +38,15 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **VIDEO-02**: Spanish subtitles are auto-generated and synced to voiceover
 - [ ] **VIDEO-03**: English subtitles are generated as secondary track/overlay
 - [ ] **VIDEO-04**: Video meets platform specs for all 4 targets (resolution, codec, file size, safe zones)
-- [ ] **VIDEO-05**: Background music bed from Artlist library is mixed under voiceover at appropriate volume level
-- [ ] **VIDEO-06**: Transition and glitch SFX from Artlist library are applied at scene changes
+- [ ] **VIDEO-05**: Background music bed from `D:/media/audio/music/` is mixed under voiceover at appropriate volume level
+- [ ] **VIDEO-06**: Transition and glitch SFX from `D:/media/audio/sfx/` are applied at scene changes
 
 ### Character & Brand
 
 - [ ] **BRAND-01**: Named AI character persona is designed with visual identity, voice, and personality traits
 - [ ] **BRAND-02**: Character appears consistently in all videos (avatar, intro sequence, visual treatment)
 - [ ] **BRAND-03**: Yocoya.ai branding (logo, URL) is visible in every video
-- [ ] **BRAND-04**: Curated Artlist audio library maintained in cloud storage (10-15 music beds, 20-30 SFX) categorized by video type and mood
+- [ ] **BRAND-04**: Curated audio library maintained at `D:/media/audio/` (music beds in `music/chill-beat/`, `music/high-energy/`, `music/ambient/`; SFX in `sfx/glitch/`, `sfx/whoosh/`, `sfx/ui/`, `sfx/impact/`, `sfx/ambient/`) categorized by video type and mood, sourced via Artlist/Freepik shopping lists
 
 ### Human Review
 

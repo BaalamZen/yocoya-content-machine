@@ -45,6 +45,8 @@ Automatically generate high-quality, branded AI explainer videos in Spanish that
 - 47+ AI tools already cataloged in Webflow CMS with affiliate links
 - Airtable base (`appW3u70zE8C5cda7`) for content tracking
 - Existing RSS-to-news pipeline (v2.9.0 workflow) as automation precedent
+- **Master asset library** at `D:/media/` -- 3,247+ files across 23GB, fully standardized (4,621 renames, 100% naming-convention compliant). Contains SFX, music, VFX, backgrounds, icons (152 tool logos), stock images/footage, per-brand project assets (yocoya, kai, baalam, etsy), and AI-generated creative art. 11 shopping lists for sourcing remaining assets from Artlist/Freepik. See `D:/media/_NAMING-CONVENTION.md` for naming rules.
+- **Asset staging area** at `~/OneDrive/Desktop/yocoya-fx/` -- 62-folder structure with asset inventory CSV and attribution tracker (`asset-attribution.json`) for downloading new assets before importing to production library
 
 **Affiliate tool inventory (13 partners):**
 - **Voice:** ElevenLabs, LOVO, Murf.ai

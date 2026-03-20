@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-02-08)
 Phase: 0 of 9 (Tech Validation)
 Plan: 0 of TBD in current phase
 Status: Ready to plan
-Last activity: 2026-02-20 — Asset inventory & folder structure created
+Last activity: 2026-03-20 — Documentation updated to reference D:/media/ master asset library
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -63,6 +63,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-20 (asset inventory & folder structure)
-Stopped at: Asset inventory CSV (59 types, 7 categories) and 62-folder staging structure created at Desktop/yocoya-fx/. Changelog updated. Ready for Phase 0 planning.
+Last session: 2026-03-20 (documentation update — D:/media/ master asset library)
+Stopped at: All project docs (README, PROJECT, REQUIREMENTS, ROADMAP, ARCHITECTURE, STATE) updated to reference `D:/media/` as the master asset library with specific folder paths for audio, SFX, VFX, and visual assets. Ready for Phase 0 planning.
 Resume file: None

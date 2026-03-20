@@ -34,7 +34,21 @@ Topic Selection → Script Generation (LLM) → Voice (ElevenLabs es-MX)
 
 ## Asset Pipeline
 
-Visual assets live in `~/OneDrive/Desktop/yocoya-fx/` (staging) and `D:/media/` (production).
+**Master asset library:** `D:/media/` -- production-ready, fully standardized (4,621 files renamed, 100% naming-convention compliant as of 2026-02-25).
+
+```text
+D:/media/
+├── assets/         # Backgrounds, fonts, icons (152 tool logos), stock images/footage
+├── audio/          # Music (chill-beat, high-energy, ambient), SFX (glitch, whoosh, UI, impact)
+├── creative/       # AI-generated art: lotus, mandalas, buddha-zen, abstract, fantasy, nature
+├── projects/       # Per-brand: yocoya (branding, youtube, fx, affiliate-partners), kai, baalam, etsy
+├── video/          # Footage, VFX (glitch, overlays, text-reveals, looping backgrounds), output
+├── _NAMING-CONVENTION.md   # Rules: lowercase, hyphens, max 60 chars, [context]-[descriptor]-[##].[ext]
+├── _shopping-lists/        # 11 Artlist/Freepik guides for filling SFX/VFX/music gaps
+└── _rename-log.txt         # License tracking: old→new filename mapping (never delete)
+```
+
+**Staging area:** `~/OneDrive/Desktop/yocoya-fx/` -- for downloading/organizing new assets before importing to `D:/media/`.
 
 **Two-tier system:**
 - **EPS/AI sheets** -- reference catalog for browsing icon variety (not usable by video tools)
@@ -43,9 +57,9 @@ Visual assets live in `~/OneDrive/Desktop/yocoya-fx/` (staging) and `D:/media/` 
 The n8n workflow finds assets by querying `yocoya-fx/asset-attribution.json`:
 1. Script generation identifies needed visuals (e.g., "show checkmark")
 2. n8n filters by `tags` + `subfolder` + `icon_name`
-3. Matching PNG path is passed to the video assembly tool as overlay
+3. Matching PNG path from `D:/media/` is passed to the video assembly tool as overlay
 
-See `yocoya-fx/STYLE-GUIDE.md` for icon styles, scene modes, and Freepik search keywords.
+See `D:/media/_NAMING-CONVENTION.md` for naming rules and per-folder patterns.
 
 ## Affiliate Tools in Pipeline
 
